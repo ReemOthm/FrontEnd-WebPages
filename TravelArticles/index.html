@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Blog Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" id="logo">Travel Articles</a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="postArticle.html">Post an Article</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="search">
+                        <input type="search" name="search" placeholder="Search for an article">
+                        <input class="btn btn-secondary btn-sm" type="submit" value="search">
+                    </div>
+                </nav>
+        </header>
+
+        <main>
+            <span id="title">What&apos;s New!</span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="articles-container">
+                            <h2>A Day in Nederland</h2>
+                            <article id="article1" class="article">
+                                <p>
+                                    Consequat primis suspendisse lacus quam nisi hendrerit feugiat. Velit semper auctor ac lorem 
+                                    vehicula ridiculus. Dui diam nisi ac porta, accumsan blandit. Amet integer nostra consectetuer
+                                    blandit quisque purus libero magnis.
+                                </p>
+                                <div class="homeImg">
+                                    <img src="images/nederland1.png" alt="Nederland">
+                                    <img src="images/nederland2.png" alt="Nederland"> 
+                                    <img src="images/nederland3.png" alt="Nederland">
+                                </div>
+                                <br>
+                                <div class="more btn btn-secondary"><a href="aDayInNederland.html"><em>See More</em></a></div>
+                            </article>
+                        </div>
+                        <div class="articles-container">
+                            <h2>Spring of Paris</h2>
+                            <article class="article">
+                                <p>
+                                    Orci etiam ante sociosqu venenatis aliquam nonummy. Auctor dui vivamus. Potenti nec. Venenatis
+                                    eu dignissim venenatis posuere lorem morbi vitae convallis aptent, ante tincidunt turpis luctus
+                                    tristique nunc nulla. Interdum magnis ornare quisque sed rutrum.
+                                </p>
+                                <div class="homeImg">
+                                    <img src="images/paris1.png" alt="Paris">  
+                                    <img src="images/paris2.png" alt="Paris">
+                                    <img src="images/paris3.png" alt="Paris">
+                                </div>
+                                <br>
+                                <div class="more btn btn-secondary"><a href="springOfParis.html"><em>See More</em></a></div>
+                            </article>
+                        </div>
+                        <div class="articles-container">
+                            <h2>The White Island-<em>Santorini</em></h2>
+                            <article class="article">
+                                <p>
+                                    Mi litora fusce tellus. Diam. Vehicula sagittis nibh nostra bibendum et. Fringilla risus faucibus
+                                    pulvinar. Platea vulputate egestas. Magnis adipiscing netus id elit, orci ultricies magnis,
+                                    habitant iaculis elementum lacinia eleifend quam leo quis conubia ligula eros ullamcorper
+                                    porttitor suscipit hendrerit. Hymenaeos torquent eros at dui ligula litora interdum vitae.
+                                </p>
+                                <div class="homeImg">
+                                    <img src="images/santorini1.png" alt="Santorini"> 
+                                    <img src="images/santorini2.png" alt="Santorini">
+                                    <img src="images/santorini3.png" alt="Santorini">
+                                </div>
+                                <br>
+                                <div class="more btn btn-secondary"><a href="theWhiteIslandSantorini.html"><em>See More</em></a></div>
+                            </article>
+                        </div>
+                        <div class="articles-container">
+                            <h2>Maldives Summer</h2>
+                            <article  class="article">
+                                <p>
+                                    Primis torquent fames dolor malesuada. Velit condimentum scelerisque. Nisi lacinia praesent sapien
+                                    eros tempus nuncporta nascetur pretium hymenaeos per orci ac venenatis parturient ornare libero
+                                    habitant. Tristique feugiat et semper. Conubia sociis vitae amet cras pede potenti dis. Neque congue
+                                    cubilia aenean Donec quis eleifend ac.
+                                </p>
+                                <div class="homeImg">
+                                    <img src="images/maldives1.png" alt="Maldives">
+                                    <img src="images/maldives2.png" alt="Maldives">
+                                    <img src="images/maldives3.png" alt="Maldives">
+                                </div>
+                                <br>
+                                <div class="more btn btn-secondary"><a href="maldivesSummer.html"><em>See More</em></a></div>
+                            </article>
+                        </div>
+                    </div>
+                    <aside class="col-3">
+                        <h3>Common Articles:</h3>
+                        <ul id="articles">
+                            <li><a href="aDayInNederland.html">A Day in Nederland</a></li>
+                            <li><a href="springOfParis.html">Spring of Paris</a></li>
+                            <li><a href="theWhiteIslandSantorini.html">The White Island-Santorini</a></li>
+                            <li><a href="maldivesSummer.html">Maldives Summer</a></li>
+                        </ul>
+                    </aside>
+                </div>    
+            </div>
+        </main>   
+        <footer>
+            <p id="copyright">&copy; All right reserved</p>
+            <p id="contact">@travilly</p>
+        </footer> 
+        <script src="script.js"></script>
+    </body>
+</html>
