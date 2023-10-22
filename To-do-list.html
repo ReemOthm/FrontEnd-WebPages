@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage 2</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-items: center;
+            background-image: linear-gradient(135deg, #FCE4EC,#213c65 );
+            height: 100vh;
+            font-family: cursive;
+        }
+
+        h1{
+            text-align: center;
+            color: blanchedalmond;
+            font-size: 40px;
+        }
+
+        .container{
+            background-color: #ada3af  ;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0px 0px 10px  #bfb1b1;
+        }
+
+        .form, .tasks{
+            width: 450px;
+            margin-bottom: 10px;
+        }
+
+        .form{
+            margin-bottom: 15px;
+        }
+
+        .container .input,
+        .container .add{
+            border: none;
+            border-radius: 6px;
+            padding: 10px;
+        }
+
+        .container .input{
+            width: 70%;
+            margin-right: 10px;
+            background-color: white;
+            outline: none;
+            font-family: unset;
+            color: #6d0f7a;
+            font-weight: 700;
+        }
+
+        .container .add{
+            color: #820b93;
+            background-color: antiquewhite ;
+            cursor: pointer;
+            float: right;
+            font-family: unset;
+            font-weight: 700;
+        }
+
+        .checked{
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>To-DO List</h1>
+        <div class="container">
+            <div class="form">
+                <input type="text" class="input" placeholder="Type a task">
+                <input type="submit" class="add" value="Add Task">
+            </div>
+            <div class="tasks">
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let input = document.querySelector('.input');
+        let tasksDiv = document.querySelector('.tasks');
+        let add = document.querySelector('.add');
+
+        let arrayTasks = [];
+
+        if (window.localStorage.tasks){
+            
+            JSON.parse(window.localStorage.getItem('tasks')).forEach(element => { //assign the array again
+                arrayTasks.push(element);
+            });
+
+            console.log(arrayTasks);
+            createTasks();
+        }
+
+        add.addEventListener('click', () => {
+            if (input.value !== ''){
+                arrayTasks.push([{id:JSON.parse(localStorage.getItem('tasks')).length, title:input.value}]);
+                window.localStorage.setItem('tasks',JSON.stringify(arrayTasks));
+                input.value = '';
+            }
+            location.reload();
+        });
+        
+        function createTasks(){
+
+            JSON.parse(localStorage.getItem('tasks')).forEach(element => {
+                let task = document.createElement('div');
+                let del = document.createElement('span');
+                let textDel = document.createTextNode('Delete');
+
+                task.style.cssText = 'display:flex; align-items:center; background-color: #f6f6f6; padding: 10px; margin-bottom: 13px; border-radius: 6px; position: relative; color: #6d0f7a;';
+                del.style.cssText = 'padding: 5px; font-size: 10px; background-color: #d95c5c; border-radius: 6px; color: white;cursor: pointer; position: absolute; right: 10px ';
+
+                task.setAttribute('id',element[0].id);
+
+                task.innerHTML = element[0].title;
+                tasksDiv.appendChild(task);
+
+                task.addEventListener('click', () => {
+                    task.classList.toggle('checked');
+                });
+                
+                del.appendChild(textDel);
+                task.appendChild(del);
+                
+                del.addEventListener('click',(e) => {
+                    arrayTasks.forEach(element => {
+                        if(element[0].id == e.currentTarget.parentElement.id){
+                            console.log(arrayTasks.splice(arrayTasks.indexOf(element),1));
+                            tasksDiv.removeChild(del.parentNode);
+                        }
+                    });
+                    window.localStorage.setItem('tasks',JSON.stringify(arrayTasks));
+                });
+            });
+        }
+
+    </script>
+</body>
+</html>
