@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.55958d22.css",
+    "main.js": "/static/js/main.9323dc95.js",
+    "static/js/787.45f96aca.chunk.js": "/static/js/787.45f96aca.chunk.js",
+    "static/media/nederland1.png": "/static/media/nederland1.0d58a82129c5cc895977.png",
+    "static/media/paris2.png": "/static/media/paris2.6e84f65e0f85d3b68880.png",
+    "static/media/maldives2.png": "/static/media/maldives2.04145857647e4e90383c.png",
+    "static/media/nederland2.png": "/static/media/nederland2.c624cc6f97a1d5039771.png",
+    "static/media/paris1.png": "/static/media/paris1.3ecc4cd33feca79dc513.png",
+    "static/media/maldives1.png": "/static/media/maldives1.fa9da5d67fba9445419e.png",
+    "static/media/santorini3.png": "/static/media/santorini3.a3747c53d5beba788828.png",
+    "static/media/santorini1.png": "/static/media/santorini1.5cb4c0b04d88047501d7.png",
+    "static/media/paris3.png": "/static/media/paris3.fc26dd8e7f9a72750939.png",
+    "static/media/maldives3.png": "/static/media/maldives3.0981004621e5094685fb.png",
+    "static/media/nederland3.png": "/static/media/nederland3.d538914113c0327d7099.png",
+    "static/media/santorini2.png": "/static/media/santorini2.9e8d85ab39ceaf2ed032.png",
+    "index.html": "/index.html",
+    "main.55958d22.css.map": "/static/css/main.55958d22.css.map",
+    "main.9323dc95.js.map": "/static/js/main.9323dc95.js.map",
+    "787.45f96aca.chunk.js.map": "/static/js/787.45f96aca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55958d22.css",
+    "static/js/main.9323dc95.js"
+  ]
+}
